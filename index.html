@@ -24,8 +24,8 @@
     --line:      rgba(255,255,255,0.08);
     --ink:       #eef2ff;
     --ink-soft:  #aab4d4;
-    --gold:      #e9c46a;
-    --gold-soft: #f2d894;
+    --gold:      #f4e5bf;
+    --gold-soft: #faf1d8;
     --accent:    #7aa2ff;
     --radius:    18px;
     --maxw:      1080px;
@@ -58,19 +58,18 @@
   .hero { text-align: center; padding: 96px 0 72px; }
 
   .owl {
-    font-size: 64px;
+    width: 224px;
+    height: auto;
+    display: block;
+    margin: 0 auto 8px;
     filter: drop-shadow(0 8px 24px rgba(233,196,106,0.35));
-    margin-bottom: 8px;
   }
 
   .hero h1 {
     font-size: clamp(48px, 9vw, 88px);
     font-weight: 800;
     margin: 8px 0 6px;
-    background: linear-gradient(180deg, #ffffff, #cfd8ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--gold);
   }
 
   .tagline {
@@ -194,7 +193,7 @@
   <!-- ================= HERO ================= -->
   <header class="hero">
     <div class="wrap">
-      <div class="owl">🦉</div>
+      <img class="owl" src="hypatia-transparent.png" alt="hypatia logo" />
       <h1>hypatia</h1>
       <p class="tagline">An AI study companion that <em>guides</em> students to the answer — instead of handing it over.</p>
       <p class="subtagline">Privacy-first · On-device options · Built for homework</p>
