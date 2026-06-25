@@ -154,7 +154,8 @@
     transition: border-color .2s ease, transform .2s ease;
   }
   .card:hover { border-color: rgba(233,196,106,0.5); transform: translateY(-3px); }
-  .card .ico { font-size: 28px; margin-bottom: 14px; }
+  .card .ico { color: var(--gold); margin-bottom: 16px; line-height: 0; }
+  .card .ico svg { width: 34px; height: 34px; }
   .card h3 { margin: 0 0 8px; font-size: 20px; }
   .card p { margin: 0; color: var(--ink-soft); font-size: 15px; }
 
@@ -200,7 +201,6 @@
 
       <div class="badges">
         <span class="badge">iOS 17+</span>
-        <span class="badge">Swift · SwiftUI</span>
         <span class="badge gold">On-device privacy</span>
         <span class="badge">10 languages</span>
       </div>
@@ -267,32 +267,71 @@
       </div>
       <div class="features">
         <div class="card">
-          <div class="ico">🧠</div>
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.5 8.5 0 0 1-.9-3.8A8.38 8.38 0 0 1 12.5 3a8.38 8.38 0 0 1 8.5 8.5z" />
+              <path d="M9.6 9.5a2.4 2.4 0 1 1 3.2 2.3c-.5.2-.8.6-.8 1.2v.4" />
+              <path d="M12 16.2h.01" />
+            </svg>
+          </div>
           <h3>Socratic chat</h3>
           <p>The AI guides instead of solving, adapting pacing, vocabulary, and rigour to the student’s level.</p>
         </div>
         <div class="card">
-          <div class="ico">➗</div>
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none" />
+              <ellipse cx="12" cy="12" rx="10" ry="4.2" />
+              <ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(60 12 12)" />
+              <ellipse cx="12" cy="12" rx="10" ry="4.2" transform="rotate(120 12 12)" />
+            </svg>
+          </div>
           <h3>Rich scientific rendering</h3>
           <p>Inline &amp; block LaTeX, scientific SVG diagrams (atomic models, geometry), and full Markdown — rendered inline in the conversation.</p>
         </div>
         <div class="card">
-          <div class="ico">📝</div>
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+              <path d="M14 3v6h6" />
+              <path d="M8 13h8" />
+              <path d="M8 17h5" />
+            </svg>
+          </div>
           <h3>Markdown notes</h3>
           <p>A dedicated Notes tab with AI-suggested titles and one-tap OCR from the clipboard to capture an exercise from a screenshot.</p>
         </div>
         <div class="card">
-          <div class="ico">🔌</div>
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="7" y="7" width="10" height="10" rx="2" />
+              <path d="M10 11.5h4M10 14h2.5" />
+              <path d="M9 7V4M12 7V4M15 7V4M9 20v-3M12 20v-3M15 20v-3" />
+              <path d="M7 9H4M7 12H4M7 15H4M20 9h-3M20 12h-3M20 15h-3" />
+            </svg>
+          </div>
           <h3>Multi-model AI</h3>
           <p>Any OpenAI-compatible endpoint (OpenRouter, Groq, Claude, GPT…), Apple Intelligence on-device, or a fully local Qwen 3.5.</p>
         </div>
         <div class="card">
-          <div class="ico">🖼️</div>
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="16" rx="2" />
+              <circle cx="8.5" cy="9" r="1.6" />
+              <path d="M4 17l4.5-4.5 3 3L15 12l5 5" />
+            </svg>
+          </div>
           <h3>Multi-modal input</h3>
           <p>Type a question, snap a photo of an exercise, or attach a PDF — analyzed via AI vision or OCR.</p>
         </div>
         <div class="card">
-          <div class="ico">🌍</div>
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18" />
+              <path d="M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9S9.5 5.5 12 3z" />
+            </svg>
+          </div>
           <h3>10 languages</h3>
           <p>French, English, Spanish, Chinese, Japanese, Hindi, Indonesian, Tamil, Vietnamese, Khmer.</p>
         </div>
