@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>hypatia — Support</title>
+<meta name="description" content="Help, frequently asked questions, and contact for hypatia — the privacy-first AI study companion." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg:        #0d1326;
+    --bg-soft:   #141d38;
+    --panel:     #16203f;
+    --panel-2:   #1b274a;
+    --line:      rgba(255,255,255,0.08);
+    --ink:       #eef2ff;
+    --ink-soft:  #aab4d4;
+    --gold:      #f4e5bf;
+    --gold-soft: #faf1d8;
+    --accent:    #7aa2ff;
+    --radius:    18px;
+    --maxw:      820px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(122,162,255,0.15), transparent 60%),
+      radial-gradient(900px 500px at 0% 10%, rgba(233,196,106,0.10), transparent 55%),
+      var(--bg);
+    color: var(--ink);
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; line-height: 1.15; letter-spacing: -0.01em; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ---------- Header ---------- */
+  .top { text-align: center; padding: 72px 0 40px; }
+  .top .logo { width: 96px; height: auto; margin: 0 auto 18px; display: block; filter: drop-shadow(0 8px 24px rgba(233,196,106,0.35)); }
+  .top h1 { font-size: clamp(36px, 7vw, 56px); color: var(--gold); margin: 0 0 10px; }
+  .top p { color: var(--ink-soft); font-size: 17px; margin: 0 auto; max-width: 540px; }
+  .home-link { display: inline-block; margin-top: 22px; font-size: 14px; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 28px 0; }
+  .eyebrow { color: var(--gold); font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; margin: 0 0 18px; }
+
+  /* ---------- FAQ ---------- */
+  details {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 4px 22px; margin-bottom: 12px;
+    transition: border-color .2s ease;
+  }
+  details[open] { border-color: rgba(244,229,191,0.4); }
+  summary {
+    cursor: pointer; list-style: none;
+    font-family: "Fraunces", serif; font-size: 19px; font-weight: 600;
+    padding: 16px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary .chev { color: var(--gold); transition: transform .2s ease; flex-shrink: 0; }
+  details[open] summary .chev { transform: rotate(45deg); }
+  details .body { padding: 0 0 18px; color: var(--ink-soft); font-size: 15.5px; }
+  details .body p { margin: 0 0 10px; }
+  details .body ol, details .body ul { margin: 0 0 10px; padding-left: 20px; }
+  details .body li { margin-bottom: 4px; }
+  details .body code {
+    background: var(--bg-soft); border: 1px solid var(--line); border-radius: 6px;
+    padding: 1px 6px; font-size: 13.5px; color: var(--gold-soft);
+  }
+  details .body strong { color: var(--ink); }
+  .note-box {
+    border-left: 3px solid var(--gold); background: rgba(244,229,191,0.06);
+    padding: 10px 14px; border-radius: 0 10px 10px 0; margin-top: 8px;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact {
+    background: linear-gradient(135deg, var(--panel-2), var(--bg-soft));
+    border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 40px; text-align: center; margin-top: 12px;
+  }
+  .contact h2 { font-size: clamp(26px, 4vw, 34px); margin: 0 0 10px; }
+  .contact p { color: var(--ink-soft); margin: 0 auto 22px; max-width: 460px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 13px 26px; border-radius: 12px; font-weight: 600; font-size: 15px;
+    background: var(--gold); color: #1a1303; border: 1px solid var(--gold);
+    box-shadow: 0 10px 30px rgba(233,196,106,0.25);
+    transition: transform .15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); text-decoration: none; }
+  .meta { color: var(--ink-soft); font-size: 13.5px; margin-top: 18px; }
+
+  /* ---------- Footer ---------- */
+  footer { border-top: 1px solid var(--line); padding: 40px 0 56px; text-align: center; margin-top: 40px; }
+  footer p { color: var(--ink-soft); font-size: 13px; margin: 4px 0; }
+
+  @media (max-width: 600px) {
+    .contact { padding: 28px; }
+    .top { padding: 56px 0 32px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="top">
+    <div class="wrap">
+      <img class="logo" src="hypatia-transparent.png" alt="hypatia logo" />
+      <h1>Support</h1>
+      <p>Need a hand with hypatia? Find answers to common questions below, or reach out — we’re happy to help.</p>
+      <a class="home-link" href="index.html">← Back to home</a>
+    </div>
+  </header>
+
+  <!-- ================= FAQ ================= -->
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Frequently asked questions</p>
+
+      <details open>
+        <summary>How do I get started? <span class="chev">+</span></summary>
+        <div class="body">
+          <p>On first launch, enter your name and your <strong>school level</strong> (collège, lycée, or higher education). Then configure at least one AI provider in <strong>Settings</strong>, open a conversation, and describe your exercise — the tutor will guide you step by step.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I set up an AI provider? <span class="chev">+</span></summary>
+        <div class="body">
+          <p>hypatia lets you bring your own AI backend. The easiest free options:</p>
+          <ol>
+            <li><strong>OpenRouter</strong> — create a free key at <a href="https://openrouter.ai">openrouter.ai</a>, set the URL to <code>https://openrouter.ai/api/v1</code>, paste your key, and pick a model (free models are tagged).</li>
+            <li><strong>Groq</strong> — create a free key at <a href="https://console.groq.com">console.groq.com</a>, set the URL to <code>https://api.groq.com/openai/v1</code>, and enter a model name (e.g. <code>llama-3.3-70b-versatile</code>).</li>
+            <li><strong>Apple Intelligence</strong> (iOS 26+) — select it as your provider; it runs on-device with no configuration.</li>
+            <li><strong>Local model (Qwen 3.5)</strong> — download it once, then it runs entirely offline.</li>
+          </ol>
+        </div>
+      </details>
+
+      <details>
+        <summary>The app can’t connect to my local server <span class="chev">+</span></summary>
+        <div class="body">
+          <p>iOS blocks plain <code>http://</code> connections by default (App Transport Security). Local servers such as Ollama or LM Studio use HTTP, so you’ll need to expose them over <strong>HTTPS</strong> — via a reverse proxy (Caddy, nginx) or a tunnel (ngrok, Tailscale).</p>
+          <div class="note-box">Tip: if you just want something that works out of the box, use OpenRouter or Groq, which are already HTTPS.</div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Is my data private? Where is it stored? <span class="chev">+</span></summary>
+        <div class="body">
+          <p>Yes. hypatia is privacy-first:</p>
+          <ul>
+            <li>Your conversations and notes are stored <strong>locally on your device</strong> and never synced to any cloud.</li>
+            <li>API keys are kept in the <strong>iOS Keychain</strong> (encrypted).</li>
+            <li>The app collects <strong>no analytics or telemetry</strong>.</li>
+          </ul>
+          <p>Note: when you use a remote AI provider, your messages are sent to that provider to generate a reply, under their terms. Apple Intelligence and the local model keep everything on-device.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I change my school level? <span class="chev">+</span></summary>
+        <div class="body">
+          <p>Open the <strong>Profile</strong> tab and change your level (collège, lycée, higher education). The tutor immediately adapts its vocabulary, pacing, and rigour to the new level.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I attach a photo of my exercise? <span class="chev">+</span></summary>
+        <div class="body">
+          <p>Yes. You can attach images from the camera, your photo library, or the clipboard — they’re analyzed with AI vision or OCR. You can also paste a copied image into the <strong>Notes</strong> tab and run one-tap text recognition to capture the exercise as text.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Which languages are supported? <span class="chev">+</span></summary>
+        <div class="body">
+          <p>French, English, Spanish, Chinese (Simplified), Japanese, Hindi, Indonesian, Tamil, Vietnamese, and Khmer.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Does hypatia cost anything? <span class="chev">+</span></summary>
+        <div class="body">
+          <p>The app works with free AI models (via OpenRouter or Groq), Apple Intelligence, or a fully local model — so you can use it at no cost. If you connect a paid provider (Claude, GPT, etc.), you pay that provider directly for your usage.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section>
+    <div class="wrap">
+      <div class="contact">
+        <h2>Still need help?</h2>
+        <p>If your question isn’t answered above, fill out our short contact form and we’ll get back to you as soon as we can.</p>
+        <a class="btn" href="https://forms.gle/7YkDZoJZHvgoYah56" target="_blank" rel="noopener">Open the contact form ↗</a>
+        <p class="meta">We typically reply within 2–3 business days.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="wrap">
+      <p>hypatia — a privacy-first AI study companion.</p>
+      <p><a href="index.html">Home</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
